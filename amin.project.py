@@ -16,14 +16,12 @@ class Library:
             book.display_info()
         print("------------------\n")
 
-    # متد جدید برای جستجوی کتاب
     def search_book(self, title):
         for book in self.books:
-            if book.title.lower() == title.lower(): # مقایسه بدون حساسیت به بزرگی و کوچکی حروف
+            if book.title.lower() == title.lower():  
                 return book
-        return None # اگر کتابی پیدا نشد، None برمی‌گرداند
-
-# --- کد قبلی برای کلاس Book ---
+        return None #، None 
+-
 class Book:
     def __init__(self, title, author, pages):
         self.title = title
@@ -51,10 +49,8 @@ if __name__ == "__main__":
     my_library.add_book(book2)
     my_library.add_book(book3)
 
-    # نمایش همه کتاب‌ها
     my_library.list_books()
 
-    # جستجوی یک کتاب
     search_title = "هری پاتر و سنگ جادو"
     found_book = my_library.search_book(search_title)
 
